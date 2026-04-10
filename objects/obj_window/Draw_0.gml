@@ -1,0 +1,1 @@
+draw_sprite(spr_window,0,x,y);
