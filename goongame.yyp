@@ -49,6 +49,7 @@
     {"id":{"name":"stanncam_resolution_presets","path":"scripts/stanncam_resolution_presets/stanncam_resolution_presets.yy",},},
     {"id":{"name":"stanncam_shake","path":"scripts/stanncam_shake/stanncam_shake.yy",},},
     {"id":{"name":"stanncam","path":"scripts/stanncam/stanncam.yy",},},
+    {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_popup","path":"sprites/spr_popup/spr_popup.yy",},},
     {"id":{"name":"spr_stanncam_zone_1side","path":"sprites/spr_stanncam_zone_1side/spr_stanncam_zone_1side.yy",},},
     {"id":{"name":"spr_stanncam_zone_2side","path":"sprites/spr_stanncam_zone_2side/spr_stanncam_zone_2side.yy",},},
