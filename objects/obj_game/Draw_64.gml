@@ -37,4 +37,65 @@ if(global.state == STATE.GAME || global.state == STATE.PAUSE){
         //draws pause menu
     }
     
+    if(winning){
+        
+        var val = winning_t/winning_duration;
+        
+        draw_set_colour(c_white)
+        draw_set_alpha(lerp(0,1,val))
+        draw_rectangle(0,0,global.gui_w,global.gui_h,false);
+        draw_set_alpha(1);
+        
+        var y_coom = lerp(global.gui_h+sprite_get_height(spr_coom),0,val);
+        
+        
+        draw_sprite(spr_coom,0,0,y_coom);
+        draw_rectangle(0,y_coom,global.gui_w,global.gui_h,false);
+        
+        if (winning_t < winning_duration) winning_t++
+        else{
+            win();    
+        }
+    }
+    
+} else if (global.state == STATE.MAIN_MENU){
+    var hover = 0;
+    if( //if the _x and _y is within the close buttons area
+        MX < 290 &&
+        MX > 160 &&
+        MY > 164 &&
+        MY < 192
+    ) {
+        hover = 1;
+        //click on main menu start button
+        if(mouse_check_button_pressed(mb_left)){
+            start_game();
+        }
+    }
+    
+    draw_sprite(spr_menu,hover,0,0);
+} else if(global.state == STATE.WIN){
+    var hover = 0;
+    if( //if the _x and _y is within the close buttons area
+        MX < 420 &&
+        MX > 270 &&
+        MY > 70 &&
+        MY < 136
+    ) {
+        hover = 1;
+        //click on winscreen button to go back to main menu and restart
+        if(mouse_check_button_pressed(mb_left)){
+            global.state = STATE.MAIN_MENU;
+        }
+    }
+    
+    draw_sprite(spr_win,hover,0,0);
+    
+    //draw completion time!
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    
+    var x_ = 223;
+    var y_ = 178;
+    draw_text(x_,y_,timer_text(global.completion_time));
 }

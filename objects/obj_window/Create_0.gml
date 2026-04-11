@@ -28,15 +28,14 @@ switch (global.difficulty) {
         inverted = (chance(12));
         moving = (chance(15));
         waving = (chance(20));
-        powerup = chance(100);
+        powerup = chance(20);
     case DIFFICULTY.HARD:
         shaking = (chance(8));
         inverted = (chance(10));
         moving = (chance(10));
         waving = (chance(10));
-        powerup = chance(100);
+        powerup = chance(20);
         break;
-	
 }
 
 //select a random popup image

@@ -68,5 +68,9 @@ if (global.state == STATE.GAME){
     }
     nirvana = clamp(nirvana,0,nirvana_max);
     #endregion
+
+    if(nirvana == nirvana_max){
+        winning = true;
+    }
 }
 

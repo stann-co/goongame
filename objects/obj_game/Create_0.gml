@@ -78,3 +78,23 @@ set_spawn_timer = function(){
     	
     }
 }
+
+winning = false;
+winning_t = 0;
+winning_duration = GAME_SPEED*2;
+
+win = function(){
+    show_debug_message("win!")
+    global.state = STATE.WIN;
+    global.completion_time = global.t;
+    instance_destroy(obj_window); //destroy all windows
+}
+
+start_game = function(){
+    
+    winning = false;
+    winning_t = 0;
+    nirvana = 0;
+    global.state = STATE.GAME;
+    global.t = 0;
+}

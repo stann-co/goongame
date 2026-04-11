@@ -15,6 +15,8 @@ global.difficulty = DIFFICULTY.START //the difficulty changes depending on how m
 
 global.t = 0; //timer that keeps going up
 
+global.completion_time = 0;
+
 enum STATE{
     MAIN_MENU,
     GAME,
@@ -22,7 +24,7 @@ enum STATE{
     WIN
 }
 
-global.state = STATE.GAME //TODO should be main menu as start
+global.state = STATE.MAIN_MENU //TODO should be main menu as start
 
 #macro PAUSED (global.state != STATE.GAME) 
 

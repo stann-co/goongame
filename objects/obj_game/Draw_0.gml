@@ -23,4 +23,4 @@ if(global.state == STATE.GAME || global.state == STATE.PAUSE){
   draw_sprite(chud,0,global.game_w,0);
   
   #endregion
-}
+} 
