@@ -32,3 +32,7 @@ sexy_videos = [
 sexy_video_index = 0;
 sexy_video = sexy_videos[sexy_video_index];
 sexy_video_t = 0;
+
+//particles
+layer_create(-1000,"particles");
+global.particles = part_system_create_layer("particles", true);

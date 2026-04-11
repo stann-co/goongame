@@ -21,6 +21,7 @@ if(size > 0){
             //if the window succesfully closed
             spawn_t = timer_max*GAME_SPEED; //if you close a window reset timer again
             instance_destroy(window);
+            part_particles_create(global.particles,MX,MY,global.part_stars,4);
             global.hovered = noone;
         } else {
             
@@ -42,7 +43,12 @@ if(spawn_t > 0){
     
     //if window is in the chuds safe region, it gets pushed out
     if(window.bbox_right > global.game_w - chud_safe_width && window.bbox_top < chud_safe_height){
-        window.x -= chud_safe_width; //pushes it left
+        if(irandom(1) == 1){
+            window.x -= chud_safe_width; //pushes it left
+        } else {
+            window.y += chud_safe_height; //or pushes it down
+        }
+        
     }
 }
 #endregion

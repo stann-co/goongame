@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"particles","folderPath":"folders/particles.yy","name":"particles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"scripts","folderPath":"folders/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sprites","folderPath":"folders/sprites.yy","name":"sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"popups","folderPath":"folders/sprites/popups.yy","name":"popups","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -42,6 +43,7 @@
     {"id":{"name":"obj_stanncam_zone_u","path":"objects/obj_stanncam_zone_u/obj_stanncam_zone_u.yy",},},
     {"id":{"name":"obj_stanncam_zone","path":"objects/obj_stanncam_zone/obj_stanncam_zone.yy",},},
     {"id":{"name":"obj_window","path":"objects/obj_window/obj_window.yy",},},
+    {"id":{"name":"ps_sparks","path":"particles/ps_sparks/ps_sparks.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"macros_globals","path":"scripts/macros_globals/macros_globals.yy",},},
     {"id":{"name":"stanncam_animcurve","path":"scripts/stanncam_animcurve/stanncam_animcurve.yy",},},
@@ -66,6 +68,7 @@
     {"id":{"name":"spr_stanncam_zone_corner","path":"sprites/spr_stanncam_zone_corner/spr_stanncam_zone_corner.yy",},},
     {"id":{"name":"spr_stanncam_zone_u","path":"sprites/spr_stanncam_zone_u/spr_stanncam_zone_u.yy",},},
     {"id":{"name":"spr_stanncam_zone","path":"sprites/spr_stanncam_zone/spr_stanncam_zone.yy",},},
+    {"id":{"name":"spr_stars","path":"sprites/spr_stars/spr_stars.yy",},},
     {"id":{"name":"spr_test","path":"sprites/spr_test/spr_test.yy",},},
     {"id":{"name":"spr_window","path":"sprites/spr_window/spr_window.yy",},},
   ],
