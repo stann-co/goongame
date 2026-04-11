@@ -1,11 +1,30 @@
 #macro MX global.camera.get_mouse_x()
 #macro MY global.camera.get_mouse_y()
 
-#macro GAME_SPEED game_get_speed(gamespeed_fps) 
+#macro GAME_SPEED game_get_speed(gamespeed_fps)
+
+
+enum DIFFICULTY{
+    START,
+    NORMAL,
+    HARD,
+}
+global.difficulty = DIFFICULTY.START //the difficulty changes depending on how much progress you made
 
 global.t = 0; //timer that keeps going up
 
 global.hovered = noone; //the current hovered element
+
+enum STATE{
+    MAIN_MENU,
+    GAME,
+    PAUSE,
+    WIN
+}
+
+global.state = STATE.MAIN_MENU
+
+#macro PAUSED (global.state != STATE.GAME) 
 
 
 #region particles

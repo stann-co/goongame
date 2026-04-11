@@ -9,15 +9,32 @@ popup_images = [
     spr_popup_small01
 ]
 
-shaking = (irandom(4) == 4); //1 out of 5 chance for it to shake
 shake_x = 0;
 shake_y = 0;
-
-inverted = (irandom(4) == 4); //1 out of 5 chance the colors are inverted
-
-moving = (irandom(4) == 4); //1 out of 5 the window is moving around
+wave_x = 0;
+wave_y = 0;
 moving_up = irandom(1);
 moving_right = irandom(1);
+
+switch (global.difficulty) {
+    case DIFFICULTY.START:
+        shaking = false;
+        inverted = false;
+        moving = false;
+        waving = false;
+    case DIFFICULTY.NORMAL:
+        shaking = (chance(10));
+        inverted = (chance(12));
+        moving = (chance(15));
+        waving = (chance(20));
+    case DIFFICULTY.HARD:
+        shaking = (chance(8));
+        inverted = (chance(10));
+        moving = (chance(10));
+        waving = (chance(10));
+        break;
+	
+}
 
 //select a random popup image
 popup_image = popup_images[irandom(array_length(popup_images)-1)];

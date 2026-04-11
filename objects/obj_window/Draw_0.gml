@@ -1,15 +1,12 @@
-if(shaking){
-    shake_x = random_range(-4,4);
-    shake_y = random_range(-4,4);
-}
 
-draw_sprite_stretched(spr_window,global.hovered == id,x+shake_x,y+shake_y,sprite_width,sprite_height);
+
+draw_sprite_stretched(spr_window,global.hovered == id,x+shake_x+wave_x,y+shake_y+wave_y,sprite_width,sprite_height);
 
 //draws popup graphic inside the popup window
 if(inverted){
     shader_set(sh_invert);
 }
-draw_sprite(popup_image,0,x+side_size+shake_x,y+top_size+shake_y);
+draw_sprite(popup_image,0,x+side_size+shake_x+wave_x,y+top_size+shake_y+wave_y);
 shader_reset();
 //draw_circle(bbox_right,bbox_top,4,false);
 

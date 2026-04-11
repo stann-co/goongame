@@ -13,3 +13,13 @@ if(moving){
         
     if (bbox_bottom > global.game_h) moving_up = true;
 }
+
+if(waving){
+    wave_x = sin(global.t/4)*8;
+    wave_y = sin((global.t)/5)*8;
+}
+
+if(shaking){
+    shake_x = random_range(-2,2);
+    shake_y = random_range(-2,2);
+}

@@ -1,11 +1,15 @@
-stanncam_init(480,270,1920,1080,,,STANNCAM_WINDOW_MODE.FULLSCREEN);
+if (os_type != os_windows){
+    stanncam_init(480,270,1920*0.75,1080*0.75,,,STANNCAM_WINDOW_MODE.FULLSCREEN);
+} else {
+    stanncam_init(480,270,1920,1080,,,STANNCAM_WINDOW_MODE.FULLSCREEN);    
+}
+stanncam_set_keep_aspect_ratio(false);
+
+
 global.camera = new stanncam(global.game_w/2, global.game_h/2);
 
 
 max_popups = 20;
-
-timer_min = 0.2;
-timer_max = 1;
 
 spawn_t = GAME_SPEED * 2;
 
@@ -20,8 +24,8 @@ chud_safe_height = 75;
 
 nirvana = 0;
 nirvana_max = 100;
-nirvana_gain_spd = 0.05;
-nirvana_drain_spd = 0.03;
+nirvana_gain_spd = 0.02;
+nirvana_drain_spd = 0.015;
 
 enum NIRVANA_GAINING{
     SUPER_GAIN,
@@ -32,6 +36,7 @@ enum NIRVANA_GAINING{
     SUPER_DRAIN
 }
 nirvana_gaining = NIRVANA_GAINING.NO_GAIN; //wether going up or down
+
 
 sexy_videos = [
     spr_sexy1,
@@ -55,3 +60,21 @@ chud_index = 0;
 //particles
 layer_create(-1000,"particles");
 global.particles = part_system_create_layer("particles", true);
+
+set_spawn_timer = function(){
+    switch (global.difficulty) {
+        case DIFFICULTY.START:
+            max_popups = 4;
+            spawn_t = random_range(1*GAME_SPEED,2*GAME_SPEED);
+            break
+        case DIFFICULTY.NORMAL:
+            max_popups = 6;
+            spawn_t = random_range(0.5*GAME_SPEED,1.5*GAME_SPEED);
+            break
+        case DIFFICULTY.HARD:
+            max_popups = 9;
+            spawn_t = random_range(0.4*GAME_SPEED,1.4*GAME_SPEED);
+            break
+    	
+    }
+}
