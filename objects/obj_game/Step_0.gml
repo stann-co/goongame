@@ -56,13 +56,14 @@ if(spawn_t > 0){
 #region gain or drain nirvana depending on amount of windows
 var window_count = instance_number(obj_window);
 
-if(window_count > 0){
-    if(nirvana > 0) nirvana-= nirvana_drain_spd;
+if(window_count == 0){
+    nirvana+= nirvana_gain_spd;
+} else if(window_count <= 2){ //less than 2 windows means miniscule gaining
+    nirvana += nirvana_gain_spd/2;
 } else {
-    if(nirvana < nirvana_max){
-        nirvana += nirvana_gain_spd;
-    }
+    nirvana-= nirvana_drain_spd;
 }
+nirvana = clamp(nirvana,0,nirvana_max);
 #endregion
 
 

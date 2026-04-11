@@ -23,7 +23,7 @@
   ],
   "name":"spr_chud02",
   "nineSlice":null,
-  "origin":0,
+  "origin":2,
   "parent":{
     "name":"chud",
     "path":"folders/sprites/chud.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":140,
     "yorigin":0,
   },
   "swatchColours":null,

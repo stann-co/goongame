@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"sh_invert",
+  "name":"sh_invert",
+  "parent":{
+    "name":"shaders",
+    "path":"folders/shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

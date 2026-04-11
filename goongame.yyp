@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"shaders","folderPath":"folders/shaders.yy","name":"shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"particles","folderPath":"folders/particles.yy","name":"particles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"scripts","folderPath":"folders/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -54,6 +55,7 @@
     {"id":{"name":"stanncam_resolution_presets","path":"scripts/stanncam_resolution_presets/stanncam_resolution_presets.yy",},},
     {"id":{"name":"stanncam_shake","path":"scripts/stanncam_shake/stanncam_shake.yy",},},
     {"id":{"name":"stanncam","path":"scripts/stanncam/stanncam.yy",},},
+    {"id":{"name":"sh_invert","path":"shaders/sh_invert/sh_invert.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_chud_angry","path":"sprites/spr_chud_angry/spr_chud_angry.yy",},},
     {"id":{"name":"spr_chud01","path":"sprites/spr_chud01/spr_chud01.yy",},},
@@ -64,6 +66,7 @@
     {"id":{"name":"spr_popup_big01","path":"sprites/spr_popup_big01/spr_popup_big01.yy",},},
     {"id":{"name":"spr_popup_medium01","path":"sprites/spr_popup_medium01/spr_popup_medium01.yy",},},
     {"id":{"name":"spr_popup_medium02","path":"sprites/spr_popup_medium02/spr_popup_medium02.yy",},},
+    {"id":{"name":"spr_popup_medium03","path":"sprites/spr_popup_medium03/spr_popup_medium03.yy",},},
     {"id":{"name":"spr_popup_small01","path":"sprites/spr_popup_small01/spr_popup_small01.yy",},},
     {"id":{"name":"spr_popup","path":"sprites/spr_popup/spr_popup.yy",},},
     {"id":{"name":"spr_sexy1","path":"sprites/spr_sexy1/spr_sexy1.yy",},},

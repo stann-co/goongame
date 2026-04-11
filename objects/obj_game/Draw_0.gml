@@ -11,5 +11,11 @@ if(sexy_video_t > sprite_get_number(sexy_video)){
     sexy_video = sexy_videos[sexy_video_index];
 } 
 
+#region draws chud state
 
-draw_sprite(spr_chud_angry,0,global.game_w,0);
+chud_index = round((nirvana/nirvana_max)*(array_length(chud_states)-1));
+
+var chud = chud_states[chud_index];    
+draw_sprite(chud,0,global.game_w,0);
+
+#endregion

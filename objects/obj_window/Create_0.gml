@@ -5,8 +5,19 @@ popup_images = [
     spr_popup_big01,
     spr_popup_medium01,
     spr_popup_medium02,
+    spr_popup_medium03,
     spr_popup_small01
 ]
+
+shaking = (irandom(4) == 4); //1 out of 5 chance for it to shake
+shake_x = 0;
+shake_y = 0;
+
+inverted = (irandom(4) == 4); //1 out of 5 chance the colors are inverted
+
+moving = (irandom(4) == 4); //1 out of 5 the window is moving around
+moving_up = irandom(1);
+moving_right = irandom(1);
 
 //select a random popup image
 popup_image = popup_images[irandom(array_length(popup_images)-1)];

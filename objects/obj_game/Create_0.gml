@@ -20,8 +20,18 @@ chud_safe_height = 75;
 
 nirvana = 0;
 nirvana_max = 100;
-nirvana_gain_spd = 1;
-nirvana_drain_spd = 0.5;
+nirvana_gain_spd = 0.05;
+nirvana_drain_spd = 0.03;
+
+enum NIRVANA_GAINING{
+    SUPER_GAIN,
+    GAIN,
+    SLIGHT_GAIN,
+    NO_GAIN,
+    DRAIN,
+    SUPER_DRAIN
+}
+nirvana_gaining = NIRVANA_GAINING.NO_GAIN; //wether going up or down
 
 sexy_videos = [
     spr_sexy1,
@@ -32,6 +42,15 @@ sexy_videos = [
 sexy_video_index = 0;
 sexy_video = sexy_videos[sexy_video_index];
 sexy_video_t = 0;
+
+chud_states = [
+    spr_chud01,
+    spr_chud02,
+    spr_chud03,
+    spr_chud04,
+    spr_chud05
+]
+chud_index = 0;
 
 //particles
 layer_create(-1000,"particles");
