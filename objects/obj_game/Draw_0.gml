@@ -1,6 +1,8 @@
 if(global.state == STATE.GAME || global.state == STATE.PAUSE){
   //draw sexy video
-  draw_sprite(sexy_video,sexy_video_t,global.game_w/2,global.game_h/2); 
+    draw_sprite(sexy_bg,0,global.game_w/2,global.game_h/2);
+    draw_sprite(sexy_video,sexy_video_t,global.game_w/2,global.game_h/2); 
+    draw_sprite(spr_sexy_frame,0,global.game_w/2,global.game_h/2-8);
   if (!PAUSED){
     sexy_video_t += sprite_get_speed(sexy_video) / GAME_SPEED;        
   }
@@ -13,7 +15,8 @@ if(global.state == STATE.GAME || global.state == STATE.PAUSE){
           sexy_video_index = 0;
       }
       sexy_video = sexy_videos[sexy_video_index];
-  } 
+      sexy_bg = sexy_bgs[irandom(array_length(sexy_bgs)-1)];
+  }
   
   #region draws chud state
   

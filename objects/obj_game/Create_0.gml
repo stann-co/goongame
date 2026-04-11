@@ -43,7 +43,15 @@ sexy_videos = [
     spr_sexy2
 ]
 
+sexy_bgs = [
+    spr_sexy_bg1,
+    spr_sexy_bg2,
+    spr_sexy_bg3
+]
+
 //sexy videos cycles through
+sexy_bg_index = 0;
+sexy_bg = sexy_bgs[sexy_bg_index];
 sexy_video_index = 0;
 sexy_video = sexy_videos[sexy_video_index];
 sexy_video_t = 0;
