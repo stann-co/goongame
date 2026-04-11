@@ -35,15 +35,28 @@ if(spawn_t > 0){
 } else if(instance_number(obj_window) < max_popups){ //spawn popup when timer reaches 0, and reset timer
     spawn_t = random_range(timer_min*GAME_SPEED,timer_max*GAME_SPEED);
     
-    var window = instance_create_depth(0,0,-instance_number(obj_window),obj_window);
+    var window = instance_create_depth(0,0,-(instance_number(obj_window)+10),obj_window);
     
     window.x = random_range(0,global.game_w-window.sprite_width);
     window.y = random_range(0,global.game_h-window.sprite_height-taskbar_height);
     
-    
+    //if window is in the chuds safe region, it gets pushed out
+    if(window.bbox_right > global.game_w - chud_safe_width && window.bbox_top < chud_safe_height){
+        window.x -= chud_safe_width; //pushes it left
+    }
 }
-
 #endregion
 
+#region gain or drain nirvana depending on amount of windows
+var window_count = instance_number(obj_window);
+
+if(window_count > 0){
+    if(nirvana > 0) nirvana-= nirvana_drain_spd;
+} else {
+    if(nirvana < nirvana_max){
+        nirvana += nirvana_gain_spd;
+    }
+}
+#endregion
 
 
