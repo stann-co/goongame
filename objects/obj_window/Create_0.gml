@@ -1,15 +1,20 @@
 top_size = 5;
 side_size = 1;
 
+width_min = 100;
+height_min = 60;
+
+width_max = 200;
+height_max = 200;
+
+//sets random window size
+image_xscale = random_range(width_min,width_max) / sprite_width;
+image_yscale = random_range(height_min,height_max) / sprite_height;
 
 
-close_size = 8; //How big the X buttons collision area is in the top right corner
+
+close_size = 16; //How big the X buttons collision area is in the top right corner
 close = function(_x,_y){
-    show_debug_message("try to close?!")
-    show_debug_message(_x < bbox_right)
-    show_debug_message(_x > (bbox_right - close_size))
-    show_debug_message(_y > bbox_top)
-    show_debug_message(_y < (bbox_top + close_size))
     if( //if the _x and _y is within the close buttons area
         _x < bbox_right &&
         _x > (bbox_right - close_size) &&
@@ -17,5 +22,8 @@ close = function(_x,_y){
         _y < (bbox_top + close_size)
     ) {
         instance_destroy();
+        return true;
     }
+    
+    return false;
 }

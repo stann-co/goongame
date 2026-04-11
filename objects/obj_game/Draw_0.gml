@@ -1,0 +1,1 @@
+draw_sprite(spr_chud_angry,0,global.game_w,0);
