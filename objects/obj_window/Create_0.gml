@@ -1,16 +1,22 @@
 top_size = 10;
 side_size = 2;
 
-width_min = 100;
-height_min = 60;
+popup_images = [
+    spr_popup_big01,
+    spr_popup_medium01,
+    spr_popup_medium02,
+    spr_popup_small01
+]
 
-width_max = 200;
-height_max = 200;
+//select a random popup image
+popup_image = popup_images[irandom(array_length(popup_images)-1)];
 
-//sets random window size
-image_xscale = random_range(width_min,width_max) / sprite_width;
-image_yscale = random_range(height_min,height_max) / sprite_height;
+var w_ = sprite_get_width(popup_image);
+var h_ = sprite_get_height(popup_image);
 
+//sets window size based on popup image
+image_xscale = (w_ + (side_size*2)) / sprite_get_width(spr_window);
+image_yscale = (h_ + side_size + top_size) / sprite_get_height(spr_window);
 
 
 close_size = 16; //How big the X buttons collision area is in the top right corner
