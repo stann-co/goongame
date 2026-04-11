@@ -22,7 +22,7 @@ enum STATE{
     WIN
 }
 
-global.state = STATE.MAIN_MENU
+global.state = STATE.GAME //TODO should be main menu as start
 
 #macro PAUSED (global.state != STATE.GAME) 
 
