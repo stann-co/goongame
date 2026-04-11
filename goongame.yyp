@@ -87,6 +87,7 @@
     {"id":{"name":"spr_stars","path":"sprites/spr_stars/spr_stars.yy",},},
     {"id":{"name":"spr_taskbar","path":"sprites/spr_taskbar/spr_taskbar.yy",},},
     {"id":{"name":"spr_test","path":"sprites/spr_test/spr_test.yy",},},
+    {"id":{"name":"spr_win","path":"sprites/spr_win/spr_win.yy",},},
     {"id":{"name":"spr_window","path":"sprites/spr_window/spr_window.yy",},},
   ],
   "resourceType":"GMProject",
