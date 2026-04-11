@@ -18,10 +18,6 @@ taskbar_height = 17;
 chud_width = 140;
 chud_height = 93;
 
-//if window spawns in the chuds area, it gets pushed out, so you can see his face
-chud_safe_width = 100;
-chud_safe_height = 75;
-
 nirvana = 0;
 nirvana_max = 100;
 nirvana_gain_spd = 0.02;
@@ -40,7 +36,9 @@ nirvana_gaining = NIRVANA_GAINING.NO_GAIN; //wether going up or down
 
 sexy_videos = [
     spr_sexy1,
-    spr_sexy2
+    spr_sexy2,
+    spr_sexy3,
+    spr_sexy4
 ]
 
 sexy_bgs = [
@@ -55,6 +53,7 @@ sexy_bg = sexy_bgs[sexy_bg_index];
 sexy_video_index = 0;
 sexy_video = sexy_videos[sexy_video_index];
 sexy_video_t = 0;
+sexy_fps = 12;
 
 chud_states = [
     spr_chud01,

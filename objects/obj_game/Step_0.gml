@@ -30,19 +30,6 @@ if (global.state == STATE.GAME){
         set_spawn_timer()
         
         var window = instance_create_depth(0,0,-(instance_number(obj_window)+10),obj_window);
-        
-        window.x = random_range(0,global.game_w-window.sprite_width);
-        window.y = random_range(0,global.game_h-window.sprite_height-taskbar_height);
-        
-        //if window is in the chuds safe region, it gets pushed out
-        if(window.bbox_right > global.game_w - chud_safe_width && window.bbox_top < chud_safe_height){
-            if(irandom(1) == 1){
-                window.x -= chud_safe_width; //pushes it left
-            } else {
-                window.y += chud_safe_height; //or pushes it down
-            }
-            
-        }
     }
     #endregion
     
