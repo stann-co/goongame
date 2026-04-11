@@ -38,6 +38,7 @@ switch (global.difficulty) {
         break;
 }
 
+
 //select a random popup image
 popup_image = popup_images[irandom(array_length(popup_images)-1)];
 
