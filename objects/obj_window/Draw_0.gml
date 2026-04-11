@@ -1,4 +1,4 @@
-draw_self()
+draw_sprite_stretched(spr_window,global.hovered == id,x,y,sprite_width,sprite_height);
 
 
 var popup_graphic = spr_popup;

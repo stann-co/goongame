@@ -1,5 +1,5 @@
-top_size = 5;
-side_size = 1;
+top_size = 10;
+side_size = 2;
 
 width_min = 100;
 height_min = 60;
@@ -14,16 +14,14 @@ image_yscale = random_range(height_min,height_max) / sprite_height;
 
 
 close_size = 16; //How big the X buttons collision area is in the top right corner
-close = function(_x,_y){
+close_hover = function(_x,_y){
     if( //if the _x and _y is within the close buttons area
         _x < bbox_right &&
         _x > (bbox_right - close_size) &&
         _y > bbox_top &&
         _y < (bbox_top + close_size)
     ) {
-        instance_destroy();
         return true;
     }
-    
     return false;
 }

@@ -22,3 +22,13 @@ nirvana = 0;
 nirvana_max = 100;
 nirvana_gain_spd = 1;
 nirvana_drain_spd = 0.5;
+
+sexy_videos = [
+    spr_sexy1,
+    spr_sexy2
+]
+
+//sexy videos cycles through
+sexy_video_index = 0;
+sexy_video = sexy_videos[sexy_video_index];
+sexy_video_t = 0;

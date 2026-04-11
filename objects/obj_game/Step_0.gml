@@ -1,32 +1,32 @@
 //mouse cursor checks for collisions and input with windows and buttons
 
 #region mouse click
-if (mouse_check_button_pressed(mb_left)){
-    show_debug_message("click")
+var windows = ds_list_create();
+var size = instance_position_list(MX,MY,obj_window,windows,false);
+if(size > 0){
     
-    var windows = ds_list_create();
-    var size = instance_position_list(MX,MY,obj_window,windows,false);
-    if(size > 0){
-        
-        var window;
-        var window_depth = 1000;
-        for (var i = 0; i < size; i++) {
-        	var window_ = windows[|i];
-            if(window_.depth < window_depth){
-                window = window_;
-                window_depth = window.depth;
-            }
-        }
-        
-        if(window.close(MX,MY) == true){
-            show_debug_message("sucessfully closed!")
-            //if the window succesfully closed
-            spawn_t = timer_max*GAME_SPEED; //if you close a window reset timer again
-        } else {
-            
+    var window;
+    var window_depth = 1000;
+    for (var i = 0; i < size; i++) {
+        var window_ = windows[|i];
+        if(window_.depth < window_depth){
+            window = window_;
+            window_depth = window.depth;
         }
     }
-}
+    
+    if(window.close_hover(MX,MY)){
+        global.hovered = window;
+        if (mouse_check_button_pressed(mb_left)){
+            //if the window succesfully closed
+            spawn_t = timer_max*GAME_SPEED; //if you close a window reset timer again
+            instance_destroy(window);
+            global.hovered = noone;
+        } else {
+            
+        }   
+    } else global.hovered = noone;
+} else global.hovered = noone;
 #endregion
 
 #region spawns popup windows
