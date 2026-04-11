@@ -1,6 +1,7 @@
 
 
-draw_sprite_stretched(spr_window,global.hovered == id,x+shake_x+wave_x,y+shake_y+wave_y,sprite_width,sprite_height);
+draw_sprite_stretched(spr_window,close_hover,x+shake_x+wave_x,y+shake_y+wave_y,sprite_width,sprite_height);
+close_hover = false;
 
 //draws popup graphic inside the popup window
 if(inverted){

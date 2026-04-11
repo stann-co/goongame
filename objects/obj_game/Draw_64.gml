@@ -12,9 +12,15 @@ if(global.state == STATE.GAME || global.state == STATE.PAUSE){
     var w_ = 325;
     var h_ = 13;
     
+    draw_set_colour(C_BAR_EMPTY);
+    draw_rectangle(x_,y_,x_+w_,y_+h_,false);
+    
     var progress_ = w_ * (nirvana/nirvana_max);
     
+    draw_set_colour(C_BAR_FULL);
     draw_rectangle(x_,y_,x_+progress_,y_+h_,false);
+    
+    draw_set_colour(c_white);
     
     draw_sprite(spr_progress_frame,0,x_,y_);
     

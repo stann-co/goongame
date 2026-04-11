@@ -3,6 +3,8 @@
 
 #macro GAME_SPEED game_get_speed(gamespeed_fps)
 
+draw_set_font(f_font);
+
 
 enum DIFFICULTY{
     START,
@@ -12,8 +14,6 @@ enum DIFFICULTY{
 global.difficulty = DIFFICULTY.START //the difficulty changes depending on how much progress you made
 
 global.t = 0; //timer that keeps going up
-
-global.hovered = noone; //the current hovered element
 
 enum STATE{
     MAIN_MENU,
@@ -26,6 +26,8 @@ global.state = STATE.GAME //TODO should be main menu as start
 
 #macro PAUSED (global.state != STATE.GAME) 
 
+#macro C_BAR_EMPTY #381631
+#macro C_BAR_FULL #FEA85F 
 
 #region particles
 global.part_stars = part_type_create();

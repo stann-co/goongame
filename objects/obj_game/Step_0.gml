@@ -17,20 +17,8 @@ if (global.state == STATE.GAME){
             }
         }
         
-        if(window.close_hover(MX,MY)){
-            global.hovered = window;
-            if (mouse_check_button_pressed(mb_left)){
-                //if the window succesfully closed
-                //set_spawn_timer(GAME_SPEED*2);
-                
-                instance_destroy(window);
-                part_particles_create(global.particles,MX,MY,global.part_stars,4);
-                global.hovered = noone;
-            } else {
-                
-            }   
-        } else global.hovered = noone;
-    } else global.hovered = noone;
+        window.hover(MX,MY)
+    }
     #endregion
     
     global.t++;
