@@ -27,4 +27,10 @@ if (!PAUSED){
         shake_x = random_range(-2,2);
         shake_y = random_range(-2,2);
     }
+    
+    if(powerup && t >= powerup_lifetime){
+        instance_destroy();
+    }
+    
+    t++;
 }

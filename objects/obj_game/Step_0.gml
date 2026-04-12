@@ -43,8 +43,10 @@ if (global.state == STATE.GAME){
     
     #region gain or drain nirvana depending on amount of windows
     var window_count = instance_number(obj_window);
-    
-    if(window_count == 0){
+    if(global.powerup > 0){
+        nirvana+= nirvana_gain_spd*2;
+    }
+    else if(window_count == 0){
         nirvana+= nirvana_gain_spd;
     } else if(window_count == 1){ //less than 2 windows means miniscule gaining
         nirvana += nirvana_gain_spd/2;
@@ -59,5 +61,7 @@ if (global.state == STATE.GAME){
     if(nirvana == nirvana_max){
         winning = true;
     }
+    
+    if(global.powerup > 0) global.powerup--;
 }
 

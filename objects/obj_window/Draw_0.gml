@@ -10,23 +10,8 @@ if(!PAUSED){
 }
 
 if(powerup){
-    var hovering = false
-    //TODO move to step event or keyboard check won't work
-    if (
-        MX > bbox_left + 9 + side_size &&
-        MX < bbox_right - 9 - side_size &&
-        MY > bbox_top + top_size + 53 &&
-        MY < bbox_bottom - side_size - 6
-    ){
-        hovering = true;
-        if(keyboard_check_pressed(mb_left)){
-            global.powerup = GAME_SPEED * 4;
-            instance_destroy();
-        }
-    }
-    
-    draw_sprite(popup_image,hovering,x+side_size+wave_x,y+top_size+wave_y);
-    
+    draw_sprite(popup_image,button_hover,x+side_size+wave_x,y+top_size+wave_y);
+    button_hover = false;
     
 }else{
     //draws popup graphic inside the popup window

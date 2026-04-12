@@ -62,6 +62,7 @@
     {"id":{"name":"stanncam","path":"scripts/stanncam/stanncam.yy",},},
     {"id":{"name":"timer_text","path":"scripts/timer_text/timer_text.yy",},},
     {"id":{"name":"sh_invert","path":"shaders/sh_invert/sh_invert.yy",},},
+    {"id":{"name":"sh_rainbow","path":"shaders/sh_rainbow/sh_rainbow.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_chud_angry","path":"sprites/spr_chud_angry/spr_chud_angry.yy",},},
     {"id":{"name":"spr_chud01","path":"sprites/spr_chud01/spr_chud01.yy",},},

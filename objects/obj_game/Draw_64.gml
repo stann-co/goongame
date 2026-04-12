@@ -17,8 +17,19 @@ if(global.state == STATE.GAME || global.state == STATE.PAUSE){
     
     var progress_ = w_ * (nirvana/nirvana_max);
     
+    
+    
     draw_set_colour(C_BAR_FULL);
+    show_debug_message(global.t);
+
+    if(global.powerup > 0){
+        shader_set(sh_rainbow);
+        var u_t = shader_get_uniform(sh_rainbow,"u_t");
+        shader_set_uniform_f(u_t,global.t);
+    }
     draw_rectangle(x_,y_,x_+progress_,y_+h_,false);
+    shader_reset();
+    
     
     draw_set_colour(c_white);
     

@@ -2,7 +2,7 @@ top_size = 10;
 side_size = 2;
 
 //if window spawns in the chuds area, it gets pushed out, so you can see his face
-chud_safe_width = 100;
+chud_safe_width = 60;
 chud_safe_height = 75;
 
 taskbar_height = 17;
@@ -31,6 +31,10 @@ wave_y = 0;
 moving_up = irandom(1);
 moving_right = irandom(1);
 
+powerup_lifetime = GAME_SPEED*3.4;
+
+t = 0;
+
 switch (global.difficulty) {
     case DIFFICULTY.START:
         shaking = false;
@@ -39,19 +43,21 @@ switch (global.difficulty) {
         waving = false;
         powerup = false;
         mirrored = false;
+        break
     case DIFFICULTY.NORMAL:
         shaking = (chance(10));
         inverted = (chance(12));
         moving = (chance(15));
         waving = (chance(20));
-        powerup = chance(20);
+        powerup = chance(30);
         mirrored = chance(10);
+        break
     case DIFFICULTY.HARD:
         shaking = (chance(8));
         inverted = (chance(10));
         moving = (chance(10));
         waving = (chance(10));
-        powerup = chance(20);
+        powerup = chance(30);
         mirrored = chance(6);
         break;
 }
@@ -124,4 +130,21 @@ hover = function(_x,_y){
             part_particles_create(global.particles,MX,MY,global.part_stars,4);
         }
     }
+    
+    if (
+        _x > bbox_left + 9 + side_size &&
+        _x < bbox_right - 9 - side_size &&
+        _y > bbox_top + top_size + 53 &&
+        _y < bbox_bottom - side_size - 6
+    ){
+        button_hover = true;
+        if(mouse_check_button_pressed(mb_left)){
+            global.powerup = GAME_SPEED * 4;
+            instance_destroy();
+            part_particles_create(global.particles,MX,MY,global.part_stars,8);
+        }
+    }
+    
+    
+    
 }
