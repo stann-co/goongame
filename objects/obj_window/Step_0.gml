@@ -1,10 +1,13 @@
 if (!PAUSED){
     if(moving){ 
-        if(moving_right) x+=1 
-        else x-= 1;
+        
+        var spd = powerup ? 2 : 1;
+        
+        if(moving_right) x+=spd
+        else x-= spd;
             
-        if(moving_up) y-=1 
-        else y+= 1;
+        if(moving_up) y-=spd 
+        else y+= spd;
             
         if(bbox_left < 0) moving_right = true;
             

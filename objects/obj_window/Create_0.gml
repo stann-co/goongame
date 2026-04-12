@@ -21,6 +21,9 @@ popup_images = [
     spr_popup_small03
 ]
 
+//select a random popup image
+popup_image = popup_images[irandom(array_length(popup_images)-1)];
+
 shake_x = 0;
 shake_y = 0;
 wave_x = 0;
@@ -53,10 +56,16 @@ switch (global.difficulty) {
         break;
 }
 
-subimg = 0;
+if(powerup){
+    shaking = false;
+    mirrored = false;
+    moving = true;
+    inverted = false;
+    waving = true;
+    popup_image = spr_popup_powerup;
+}
 
-//select a random popup image
-popup_image = popup_images[irandom(array_length(popup_images)-1)];
+subimg = 0;
 
 var w_ = sprite_get_width(popup_image);
 var h_ = sprite_get_height(popup_image);

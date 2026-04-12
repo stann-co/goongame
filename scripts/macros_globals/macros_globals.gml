@@ -24,6 +24,8 @@ enum STATE{
     WIN
 }
 
+global.powerup = 0;
+
 global.state = STATE.MAIN_MENU //TODO should be main menu as start
 
 #macro PAUSED (global.state != STATE.GAME) 

@@ -79,6 +79,7 @@
     {"id":{"name":"spr_popup_medium04","path":"sprites/spr_popup_medium04/spr_popup_medium04.yy",},},
     {"id":{"name":"spr_popup_medium05","path":"sprites/spr_popup_medium05/spr_popup_medium05.yy",},},
     {"id":{"name":"spr_popup_medium06","path":"sprites/spr_popup_medium06/spr_popup_medium06.yy",},},
+    {"id":{"name":"spr_popup_powerup","path":"sprites/spr_popup_powerup/spr_popup_powerup.yy",},},
     {"id":{"name":"spr_popup_small01","path":"sprites/spr_popup_small01/spr_popup_small01.yy",},},
     {"id":{"name":"spr_popup_small02","path":"sprites/spr_popup_small02/spr_popup_small02.yy",},},
     {"id":{"name":"spr_popup_small03","path":"sprites/spr_popup_small03/spr_popup_small03.yy",},},
