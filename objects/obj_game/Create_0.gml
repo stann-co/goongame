@@ -51,9 +51,9 @@ sexy_bgs = [
 sexy_bg_index = 0;
 sexy_bg = sexy_bgs[sexy_bg_index];
 sexy_video_index = 0;
-sexy_video = sexy_videos[sexy_video_index];
+sexy_video = spr_sexy_buffer;
 sexy_video_t = 0;
-sexy_fps = 12;
+sexy_fps = 10;
 
 chud_states = [
     spr_chud01,
@@ -104,4 +104,8 @@ start_game = function(){
     nirvana = 0;
     global.state = STATE.GAME;
     global.t = 0;
+    instance_destroy(obj_window); //destroy all windows
+    sexy_video = spr_sexy_buffer;
+    sexy_video_t = 0;
+    sexy_fps = 10;
 }

@@ -91,6 +91,7 @@
     {"id":{"name":"spr_sexy_bg1","path":"sprites/spr_sexy_bg1/spr_sexy_bg1.yy",},},
     {"id":{"name":"spr_sexy_bg2","path":"sprites/spr_sexy_bg2/spr_sexy_bg2.yy",},},
     {"id":{"name":"spr_sexy_bg3","path":"sprites/spr_sexy_bg3/spr_sexy_bg3.yy",},},
+    {"id":{"name":"spr_sexy_buffer","path":"sprites/spr_sexy_buffer/spr_sexy_buffer.yy",},},
     {"id":{"name":"spr_sexy_frame","path":"sprites/spr_sexy_frame/spr_sexy_frame.yy",},},
     {"id":{"name":"spr_sexy1","path":"sprites/spr_sexy1/spr_sexy1.yy",},},
     {"id":{"name":"spr_sexy2","path":"sprites/spr_sexy2/spr_sexy2.yy",},},

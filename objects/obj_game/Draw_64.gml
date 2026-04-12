@@ -2,8 +2,22 @@
 //draw_text(2,2,progression_text);
 
 if(global.state == STATE.GAME || global.state == STATE.PAUSE){
-
-    draw_sprite(spr_taskbar,0,0,global.game_h);
+    
+    var hover = 0;
+    if( //if the _x and _y is within the close buttons area
+        MX < 53 &&
+        MX > 0 &&
+        MY > global.gui_h-16 &&
+        MY < global.gui_h &&
+        global.state == STATE.GAME
+    ) {
+        hover = 1;
+        //click on winscreen button to go back to main menu and restart
+        if(mouse_check_button_pressed(mb_left)){
+            global.state = STATE.PAUSE;
+        }
+    }
+    draw_sprite(spr_taskbar,hover,0,global.game_h);
     
     #region draw progressbar
     
@@ -46,6 +60,54 @@ if(global.state == STATE.GAME || global.state == STATE.PAUSE){
         draw_set_alpha(1)
         
         //draws pause menu
+        
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_middle);
+        
+        var menu_h = 30;
+        var menu_w = 120;
+        x_ = global.gui_w/2;
+        
+        y_ = (global.gui_h/5)*2;
+        
+        if(
+            MX > x_-menu_w/2 &&
+            MX < x_+menu_w/2 &&
+            MY > y_-menu_h/2 &&
+            MY < y_+menu_h/2
+        ){
+            var shake_x = random_range(-1,1);
+            var shake_y = random_range(-1,1);
+            draw_set_colour(C_BAR_FULL)
+            draw_text(x_+shake_x,y_+shake_y,"continue"); 
+            draw_set_colour(c_white)
+            
+            if(mouse_check_button_pressed(mb_left)){
+                show_debug_message("menu clicked!")
+                global.state = STATE.GAME;
+            }
+        } else draw_text(x_,y_,"continue");
+        
+        
+        y_ = (global.gui_h/5)*3;
+        
+        if(
+            MX > x_-menu_w/2 &&
+            MX < x_+menu_w/2 &&
+            MY > y_-menu_h/2 &&
+            MY < y_+menu_h/2
+        ){
+            var shake_x = random_range(-1,1);
+            var shake_y = random_range(-1,1);
+            draw_set_colour(C_BAR_FULL)
+            draw_text(x_+shake_x,y_+shake_y,"main menu"); 
+            draw_set_colour(c_white)
+            
+            if(mouse_check_button_pressed(mb_left)){
+                show_debug_message("menu clicked!")
+                global.state = STATE.MAIN_MENU;
+            }
+        } else draw_text(x_,y_,"main menu");
     }
     
     if(winning){
